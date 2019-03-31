@@ -1,3 +1,5 @@
+// swift-tools-version:4.2
+
 import PackageDescription
 
 #if !os(Linux)
@@ -9,7 +11,7 @@ import PackageDescription
         name: "Cdns_sd",
         pkgConfig: "avahi-compat-libdns_sd",
         providers: [
-            .Apt("libavahi-compat-libdnssd-dev")
+            .apt(["libavahi-compat-libdnssd-dev"])
         ]
     )
 #endif
